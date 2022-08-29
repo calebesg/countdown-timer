@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply bg-darkBlue-600 font-sans bg-stars;
+  @apply bg-darkBlue-800 font-sans bg-stars;
+}
+
+#root {
+  @apply bg-pattern bg-no-repeat bg-bottom h-screen;
 }
