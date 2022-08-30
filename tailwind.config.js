@@ -23,6 +23,7 @@ module.exports = {
       },
       boxShadow: {
         darkBorder: '10px 0px 2px 0px hsl(234, 17%, 12%)',
+        darkBorderSm: '5px 0px 1px 0px hsl(234, 17%, 12%)',
       },
     },
   },
