@@ -44,7 +44,7 @@ function SwiperCard({ intervalTime, countSlides, text }: ISwiperCardProps) {
   return (
     <div className="text-center">
       <Swiper
-        className="w-36 h-36 bg-darkBlue-600 rounded-lg rotate-90 overflow-hidden shadow-lg"
+        className="w-36 h-36 bg-darkBlue-600 rounded-lg rotate-90 overflow-hidden shadow-darkBorder"
         slidesPerView={1}
         onSlideChange={() => {}}
         modules={[EffectFlip]}
@@ -54,7 +54,7 @@ function SwiperCard({ intervalTime, countSlides, text }: ISwiperCardProps) {
         {/* <SlideAuto intervalTime={intervalTime} /> */}
         {renderItems()}
       </Swiper>
-      <span className="inline-block mt-2 uppercase text-darkBlue-400 text-sm tracking-[0.25rem]">
+      <span className="inline-block mt-6 uppercase text-darkBlue-400 text-xs tracking-[0.25rem]">
         {text}
       </span>
     </div>

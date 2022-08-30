@@ -21,6 +21,9 @@ module.exports = {
         stars: 'url(./src/images/bg-stars.svg)',
         pattern: 'url(./src/images/pattern-hills.svg)',
       },
+      boxShadow: {
+        darkBorder: '10px 0px 2px 0px hsl(234, 17%, 12%)',
+      },
     },
   },
   plugins: [],

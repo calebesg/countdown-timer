@@ -4,7 +4,7 @@ import SwiperCard from './components/SwiperCard'
 
 function App() {
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <div className="h-screen flex flex-col items-center justify-center relative">
       <h1 className="text-white text-2xl uppercase tracking-[0.3rem]">
         We're launching soon
       </h1>
@@ -16,7 +16,7 @@ function App() {
         <SwiperCard text="seconds" countSlides={59} intervalTime={0.1} />
       </main>
 
-      <footer className="flex gap-3">
+      <footer className="flex gap-3 absolute bottom-8">
         <SocialButton activeColor="blue">
           <FaFacebookSquare />
         </SocialButton>
