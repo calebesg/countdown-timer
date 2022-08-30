@@ -7,5 +7,5 @@ body {
 }
 
 #root {
-  @apply bg-pattern bg-no-repeat bg-bottom h-screen;
+  @apply h-screen w-screen bg-pattern bg-no-repeat bg-auto md:bg-contain bg-right-bottom md:bg-bottom;
 }
