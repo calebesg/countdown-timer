@@ -1,5 +1,6 @@
 import { FaFacebookSquare, FaPinterest, FaInstagram } from 'react-icons/fa'
 import SocialButton from './components/SocialButton'
+import SwiperTimer from './components/SwiperTimer'
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
         We're launching soon
       </h1>
 
-      <main></main>
+      <main>
+        <SwiperTimer intervalTime={1000} />
+      </main>
 
       <footer className="flex gap-3">
         <SocialButton activeColor="blue">
