@@ -18,8 +18,8 @@ module.exports = {
         sans: ['Red Hat Text', 'sans-serif'],
       },
       backgroundImage: {
-        stars: 'url(./src/images/bg-stars.svg)',
-        pattern: 'url(./src/images/pattern-hills.svg)',
+        stars: 'url(./images/bg-stars.svg)',
+        pattern: 'url(./images/pattern-hills.svg)',
       },
       boxShadow: {
         darkBorder: '10px 0px 2px 0px hsl(234, 17%, 12%)',
