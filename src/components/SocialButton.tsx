@@ -12,7 +12,7 @@ function SocialButton({ children, activeColor }: ISocialButtonProps) {
       className={classNames('text-2xl text-darkBlue-400 transition-colors', {
         'hover:text-blue-500': activeColor === 'blue',
         'hover:text-red-500': activeColor === 'red',
-        'hover:text-pink-600': activeColor === 'pink',
+        'hover:text-softRed-400': activeColor === 'pink',
       })}
     >
       {children}

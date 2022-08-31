@@ -1,17 +1,23 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectFlip } from 'swiper'
-import SlideAuto from './SlideAuto'
 
 import 'swiper/css'
 import 'swiper/css/effect-flip'
+import SlideControl from './SlideControl'
 
 interface ISwiperCardProps {
-  intervalTime: number // value in seconds
   countSlides: number
   text: string
+  currentSlide: number
+  onUpdateSlide?: (index: number) => void
 }
 
-function SwiperCard({ intervalTime, countSlides, text }: ISwiperCardProps) {
+function SwiperCard({
+  currentSlide,
+  countSlides,
+  text,
+  onUpdateSlide,
+}: ISwiperCardProps) {
   const renderItems = () => {
     const item = (text: string) => (
       <SwiperSlide
@@ -32,7 +38,7 @@ function SwiperCard({ intervalTime, countSlides, text }: ISwiperCardProps) {
 
     let slides = []
 
-    for (let i = 0; i < countSlides; i++) {
+    for (let i = 1; i <= countSlides; i++) {
       const text =
         countSlides - i < 10 ? `0${countSlides - i}` : `${countSlides - i}`
       slides.push(item(text))
@@ -46,12 +52,12 @@ function SwiperCard({ intervalTime, countSlides, text }: ISwiperCardProps) {
       <Swiper
         className="w-[70px] h-[70px] md:w-36 md:h-36 bg-darkBlue-600 rounded-[4px] md:rounded-lg rotate-90 overflow-hidden shadow-darkBorderSm md:shadow-darkBorder"
         slidesPerView={1}
-        onSlideChange={() => {}}
+        onSlideChange={swiper => onUpdateSlide?.(swiper.activeIndex)}
         modules={[EffectFlip]}
         effect="flip"
         loop
       >
-        {/* <SlideAuto intervalTime={intervalTime} /> */}
+        <SlideControl currentSlide={currentSlide} />
         {renderItems()}
       </Swiper>
       <span className="inline-block mt-4 md:mt-6 uppercase text-darkBlue-400 text-[8px] md:text-xs tracking-[0.15rem] md:tracking-[0.25rem]">
