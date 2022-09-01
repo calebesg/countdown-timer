@@ -53,9 +53,11 @@ function App() {
 
   return (
     <div className="h-screen flex flex-col items-center justify-center pt-32 md:pt-[20vh] pb-8">
-      <h1 className="text-white text-xl max-w-[300px] md:max-w-full text-center md:text-2xl uppercase tracking-[0.4rem]">
-        We're launching soon
-      </h1>
+      <header>
+        <h1 className="text-white text-xl max-w-[300px] md:max-w-full text-center md:text-2xl uppercase tracking-[0.4rem]">
+          We're launching soon
+        </h1>
+      </header>
 
       <main className="flex gap-4 md:gap-8 my-14 md:my-20">
         <SwiperCard text="days" countSlides={9} currentSlide={days} />
@@ -70,13 +72,13 @@ function App() {
       </main>
 
       <footer className="flex gap-3 mt-auto">
-        <SocialButton activeColor="blue">
+        <SocialButton activeColor="blue" aria="facebook">
           <FaFacebookSquare />
         </SocialButton>
-        <SocialButton activeColor="red">
+        <SocialButton activeColor="red" aria="pinterest">
           <FaPinterest />
         </SocialButton>
-        <SocialButton activeColor="pink">
+        <SocialButton activeColor="pink" aria="instagram">
           <FaInstagram />
         </SocialButton>
       </footer>
